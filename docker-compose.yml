@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  userbot:
+    build: .
+    container_name: telegram-userbot
+    restart: unless-stopped
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - SESSION=${SESSION}
+      - OWNER_ID=${OWNER_ID}
+    volumes:
+      - ./data:/app/data
