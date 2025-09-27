@@ -1,0 +1,8 @@
+services:
+  - name: telegram-userbot
+    type: worker
+    runtime: python
+    build:
+      buildCommand: "pip install -r requirements.txt"
+    deploy:
+      startCommand: "python main.py"
